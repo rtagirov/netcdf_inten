@@ -1,0 +1,5 @@
+src/*.mod
+src/*.o
+netcdf/*.o
+netcdf/*.a
+bin/*.nc

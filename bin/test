@@ -1,0 +1,9 @@
+#!/bin/bash
+Intfolder="/scratch/dp100/shared/Rinat_Veronika/metallicity_spec/mh1-300/182000/1357/spec/"
+number="182000"
+echo "and now the intensities!"
+./getinten <<EOF > outint
+"$Intfolder"
+"$number"
+"$number"
+EOF

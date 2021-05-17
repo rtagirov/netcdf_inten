@@ -1,0 +1,34 @@
+!--- IMPORTANT --- ! 
+
+--- on dirac, installation of the netcdf3.6.1. lib works with the module 
+module load openmpi/intel/3.0.1
+
+
+---------------
+For NETCDF lib: 
+---------------
+
+1) downloading the  netcdf lib package:
+./download_download_netcdf.sh
+
+
+2) change one file:  one needs to manually add  the following line  
+
+#include <cstring>
+
+in the file build/netcdf-3.6.1/src/cxx/ncvalues.cpp 
+
+3) run the installation: 
+
+./install_it.sh
+
+----------------
+For the code:
+----------------
+
+run:
+./compile.sh 
+
+
+Then enjoy! 
+

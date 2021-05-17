@@ -1,0 +1,24 @@
+#!/bin/bash
+FILES=/scratch/yeo/SATIRE3D/D100/snapshots/eosP.*
+folder="/scratch/yeo/SATIRE3D/D100/snapshots/"
+Intfolder="/scratch/bhasari/Final_atlas_results_asplund/MR/D100/mu=010/D100_1D_SLICE_snap_"
+for f in $FILES
+do 
+echo "Processing $f files..."
+ echo "this is folder $folder  "
+filename=$(basename -- "$f")
+##extension="${filename##*.}"
+filename="${filename%.*}"
+number="${filename##*.}"
+echo "and the number is $number "
+./fitstest<<EOF> out  
+"$folder"
+"$number"
+EOF
+echo "and now the intensities!"
+./inten_get <<EOF > outint
+"$Intfolder"
+"$number"
+EOF
+done
+ 
