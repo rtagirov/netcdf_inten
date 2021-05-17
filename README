@@ -9,7 +9,7 @@ For NETCDF lib:
 ---------------
 
 1) downloading the  netcdf lib package:
-./download_download_netcdf.sh
+./download_netcdf.sh
 
 
 2) change one file:  one needs to manually add  the following line  
